@@ -1,4 +1,4 @@
-import ProtectedRoutes from "./ProtectedRoutes";
+import ProtectedRoutes from "../../Routes/ProtectedRoutes";
 import { Container } from './styles'
 
 function Home(){
