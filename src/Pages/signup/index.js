@@ -24,7 +24,7 @@ function Signin() {
         try{
             setLoading(true);
             const value = await userServices.Signup(form);
-            if(value === true){
+            if(value){
                 alert("Cadastrado com Sucesso!!");
                 navigate('/home');
             }

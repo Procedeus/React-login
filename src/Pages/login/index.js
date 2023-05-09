@@ -23,7 +23,7 @@ function Signin() {
         event.preventDefault();
         try{
             setLoading(true);
-            const value = await userServices.Signin(form);
+            const value = await userServices.Login(form);
             if(value === true){
                 alert("Logado com Sucesso!!");
                 navigate('/home');
