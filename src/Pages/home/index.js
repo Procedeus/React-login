@@ -1,11 +1,13 @@
 import ProtectedRoutes from "../../Routes/ProtectedRoutes";
 import { Container } from './styles'
+import { useState } from 'react';
 
 function Home(){
+    const [userAuth, setUserAuth] = useState(null);
     return (
-        <ProtectedRoutes>
+        <ProtectedRoutes setUserAuth={setUserAuth}>
             <Container>
-                <h1>Bem-vindo(a)</h1>
+                <h1>Bem-vindo(a) {userAuth}</h1>
             </Container>
         </ProtectedRoutes>
     );
