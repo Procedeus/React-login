@@ -1,7 +1,8 @@
 import React from "react";
-import Signin from "../Pages/signin"
+import Login from "../Pages/login"
 import Signup from "../Pages/signup"
 import Home from "../Pages/home"
+import Logout from "../Pages/logout"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
@@ -10,8 +11,9 @@ const Routering = () => {
         <Router>
             <Routes>
                 <Route path="*" element={<Home/>}/>
-                <Route path="/signin" element={<Signin/>}/>
+                <Route path="/login" element={<Login/>}/>
                 <Route path="/signup" element={<Signup/>}/>
+                <Route path="/logout" element={<Logout/>}/>
             </Routes>
         </Router>
     );
