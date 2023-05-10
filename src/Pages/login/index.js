@@ -23,18 +23,18 @@ function Signin() {
         event.preventDefault();
         try{
             setLoading(true);
-            const value = await userServices.Login(form);
-            if(value === true){
-                alert("Logado com Sucesso!!");
-                navigate('/home');
-            }
-            else{
-                alert("Usuário e/ou Senha incorretos!!");
-            }
+            await userServices.Login(form);
+            alert("Logado com Sucesso!!");
+            navigate('/home');
             setLoading(false);
         }
-        catch(err){
-            console.log(err);
+        catch(error){
+            if (error.response) {
+                alert(`Erro ${error.response.status}: ${error.response.data.error}`);
+              } else {
+                alert('Erro desconhecido: '+ error);
+            }
+            setLoading(false);
         }
     }
 
