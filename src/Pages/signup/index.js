@@ -21,21 +21,20 @@ function Signin() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true);
         try{
-            setLoading(true);
-            const value = await userServices.Signup(form);
-            if(value){
-                alert("Cadastrado com Sucesso!!");
-                navigate('/home');
-            }
-            else{
-                alert("Não foi possível cadastrar");
-            }
-            setLoading(false);
+            await userServices.Signup(form);
+            alert("Cadastrado com Sucesso!!");
+            navigate('/home');
         }
-        catch(err){
-            console.log(err);
+        catch(error){
+            if (error.response) {
+                alert(`Erro ${error.response.status}: ${error.response.data.error}`);
+                } else {
+                alert('Erro desconhecido: '+ error);
+            }
         }
+        setLoading(false);
     }
 
     const validarInput = () => {
