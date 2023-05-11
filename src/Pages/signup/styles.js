@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     min-width: 100vw;
-    background-color: #383838;
+    background-color: var(--three-color);
 `
 
 export const Form = styled.form`
@@ -15,25 +15,25 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #201d1d;
+    background-color: var(--two-color);
     border-radius: 5px;
     width: 100%;
     max-width: 450px;
     gap: 30px 0px;
 
     h1{
-        color: white;
+        color: var(--text-color);
         font-size: 20px;
         font-weight: light;
     }
 
     p{
-        color: white;
+        color: var(--text-color);
         font-size: 16px;
         font-weight: bold;
     }
     a{
-        color:white;
+        color:var(--text-color);
         font-size: 16px;
         text-decoration: none;
     }

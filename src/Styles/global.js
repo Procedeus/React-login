@@ -1,6 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+:root{
+    --background-color: #1e1e20;
+    --input-color: #524d51;
+    --button-color: #e74c3c;
+    --background-lite-color: #272125;
+    --text-color: #FFF;
+
+}
+
 *{
     font-family: 'Signika Negative', sans-serif;
     margin: 0;
@@ -11,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 body{
     width: 100vw;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-color: var(--one=color);
 }
 `
 

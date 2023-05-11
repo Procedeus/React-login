@@ -6,10 +6,10 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     min-width: 100vw;
-    background-color: #383838;
+    background-color: var(--one-color);
 
     h1{
-        color: white;
+        color: var(--text-color);
         font-size: 20px;
         font-weight: light;
     }

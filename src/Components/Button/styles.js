@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
 const ButtonCustomizado = styled.input`
-    color: #FFF;
+    color: var(--text-color);
     font-size: 20px;
     border: 30px;
-    background-color: #6a6a6a;
+    background-color: var(--button-color);
     border-radius: 8px;
     width: 100%;
     height: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     cursor: pointer;
+    
 
     ${props => props.disabled === false &&`
     &:hover{
-        background-color: #FFF;
-        color: #6a6a6a;
+        background-color: var(--background-color);
+        color: var(--text-color);
     }`}
     ${props => props.disabled &&`
     opacity: 0.1;
