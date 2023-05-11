@@ -14,7 +14,7 @@ const ButtonCustomizado = styled.input`
 
     ${props => props.disabled === false &&`
     &:hover{
-        background-color: var(--background-color);
+        background-color: var(--background-lite-color);
         color: var(--text-color);
     }`}
     ${props => props.disabled &&`
